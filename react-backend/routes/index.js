@@ -7,10 +7,10 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.use(express.static("client/build"));
+//router.use(express.static("client/build"));
 
-router.get("*", (req, res) => {
+/*router.get("*", (req, res) => {
   res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
-});
+});*/
 
 module.exports = router;
