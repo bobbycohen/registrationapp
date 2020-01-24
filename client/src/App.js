@@ -76,7 +76,9 @@ class App extends React.Component {
                 <GridBase>
                     <Route
                         exact path="/"
-                        component={Landing}
+                        render={props => (
+                            <Redirect to={`/login`}/>
+                        )}
                     />
                     <Route
                         path="/login"

@@ -7,6 +7,7 @@ import {
     FormInput,
     FormButton
 } from "./shared";
+import FacebookLoginBtn from 'react-facebook-login';
 
 export class Login extends React.Component {
     constructor(props) {
@@ -79,7 +80,59 @@ export class Login extends React.Component {
                     <div />
                     <FormButton onClick={this.onSubmit}>Register</FormButton>
                 </FormBase>
+                <LoginFacebook/>
             </div>
+        );
+    }
+}
+
+class LoginFacebook extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            auth: false,
+            name: "",
+            picture: ""
+        }
+    };
+
+    componentClicked = () => {
+        console.log('Facebook button clicked');
+    };
+
+    responseFacebook = (response) => {
+        console.log(response);
+        this.setState({
+            auth: true,
+            name: response.name,
+            picture: response.picture.data.url
+        });
+    };
+
+    render() {
+        let facebookData;
+
+        this.state.auth ?
+            facebookData = (
+                <div>
+                    <img src={this.state.picture} alt={this.state.name} />
+                    <h2>Welcome, {this.state.name}!</h2>
+                </div>
+            ) :
+            facebookData = (
+                <FacebookLoginBtn
+                    appId="483040995642323"
+                    autoLoad={true}
+                    fields="name,picture"
+                    onClick={this.componentClicked}
+                    callback={this.responseFacebook}
+                />
+            );
+
+        return (
+            <>
+                {facebookData}
+            </>
         );
     }
 }
