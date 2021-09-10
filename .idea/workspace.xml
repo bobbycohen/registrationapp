@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7f2da4a-437a-4b55-af5e-5977eaeed2e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-backend/node_modules/.bin/acorn" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/react-backend/node_modules/.bin/acorn.cmd" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/react-backend/node_modules/.bin/acorn.ps1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/react-backend/node_modules/.bin/cleancss" beforeDir="false" />
@@ -1584,7 +1583,6 @@
       <change beforePath="$PROJECT_DIR$/react-backend/node_modules/yargs/lib/usage.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/react-backend/node_modules/yargs/lib/validation.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/react-backend/node_modules/yargs/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/react-backend/package-lock.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1655,7 +1653,7 @@
       <workItem from="1631100220247" duration="4692000" />
       <workItem from="1631106854141" duration="6966000" />
       <workItem from="1631274490379" duration="4699000" />
-      <workItem from="1631295365342" duration="7194000" />
+      <workItem from="1631295365342" duration="7495000" />
     </task>
     <servers />
   </component>

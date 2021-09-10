@@ -1,2 +1,5 @@
-**/client/node_modules/**
-**/react-backend/node_modules/**
+client/node_modules/**
+client/build/**
+react-backend/node_modules/**
+client/package-lock.json
+react-backend/package-lock.json
