@@ -112,6 +112,7 @@ class App extends React.Component {
                            <Counter {...props} />
                        )}
                    />
+
                 </GridBase>
             </BrowserRouter>
         );
@@ -141,9 +142,8 @@ function Landing() {
   )
 }
 
-/*
-<Route
-                        path="/logout"
-                        render={props => <Logout {...props} logOut={this.logOut} />}
-                    />
- */
+/*<Route
+    path="/logout"
+    render={props => <Logout {...props} logOut={this.logOut} />}
+/>*/
+

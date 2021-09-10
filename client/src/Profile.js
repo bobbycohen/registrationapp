@@ -100,7 +100,6 @@ export class Profile extends React.Component {
 
 Profile.propTypes = {
     match: PropTypes.object.isRequired,
-    //history: PropTypes.func.isRequired,
     gridPlacement: PropTypes.string,
     user: PropTypes.string
 };

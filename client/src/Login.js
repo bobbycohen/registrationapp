@@ -78,9 +78,12 @@ export class Login extends React.Component {
                         value={this.state.password}
                     />
                     <div />
-                    <FormButton onClick={this.onSubmit}>Register</FormButton>
+                    <FormButton onClick={this.onSubmit}>Login</FormButton>
+                    <div />
+                    <FormButton onClick={() => this.props.history.push("/register")}>Register</FormButton>
+                    <div />
+                    <FormButton onClick={() => this.props.history.push("/counter")}>Counter</FormButton>
                 </FormBase>
-                <LoginFacebook/>
             </div>
         );
     }

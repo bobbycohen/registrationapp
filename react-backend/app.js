@@ -4,6 +4,7 @@ let path = require('path');
 let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 let session = require('express-session');
+const PORT = 3001;
 
 let indexRouter = require('./routes/index');
 let usersRouter = require('./routes/users');
@@ -14,10 +15,14 @@ app.use(express.static(path.join(__dirname, "client/build")));
 
 //set up mongoose connection
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://localhost:27017';
+var mongoDB = 'mongodb://localhost:27017/details';
 mongoose.connect(mongoDB, { useNewUrlParser: true });
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error: '));
+
+db.once("open", function() {
+  console.log("Connection with MongoDB was successful");
+})
 
 //import models, { connectDb } from "./models";
 //var models = require('./models');
@@ -47,9 +52,9 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+//app.use(function(req, res, next) {
+//  next(createError(404));
+//});
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -67,6 +72,9 @@ app.use(function(err, req, res, next) {
     console.log(`RegAppDB listening on port ${process.env.PORT}!`)
   });
 });*/
+app.listen(PORT, function() {
+  console.log("Backend is running on Port: " + PORT);
+})
 
 module.exports = app;
 
